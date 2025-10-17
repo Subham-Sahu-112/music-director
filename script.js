@@ -66,6 +66,74 @@ categoryBtns.forEach((btn) => {
   });
 });
 
+// Blog category filter functionality
+const blogCategoryBtns = document.querySelectorAll(".blog-category-btn");
+const blogPosts = document.querySelectorAll(".blog-post");
+
+blogCategoryBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all buttons
+    blogCategoryBtns.forEach((b) => b.classList.remove("active"));
+    // Add active class to clicked button
+    btn.classList.add("active");
+
+    const category = btn.getAttribute("data-category");
+
+    blogPosts.forEach((post) => {
+      const postCategory = post.getAttribute("data-category");
+      
+      if (category === "all" || postCategory === category) {
+        post.style.display = "block";
+        post.style.animation = "fadeInUp 0.5s ease-out";
+      } else {
+        post.style.display = "none";
+      }
+    });
+  });
+});
+
+// Modal functionality for blog posts
+const modal = document.getElementById("blogModal");
+const closeBtn = document.querySelector(".close");
+const readMoreLinks = document.querySelectorAll(".read-more");
+
+// Open modal when clicking "Read More"
+readMoreLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const title = link.getAttribute("data-title");
+    const content = link.getAttribute("data-content");
+    
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalContent").textContent = content;
+    
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Close modal when clicking the close button
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+
+// Close modal when clicking outside of it
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
+// Close modal on ESC key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.style.display === "block") {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
+
 // Contact Form Submission
 const contactForm = document.getElementById("contactForm");
 
@@ -136,6 +204,7 @@ animateOnScroll(".album-card");
 animateOnScroll(".award-card");
 animateOnScroll(".gallery-item");
 animateOnScroll(".stat-item");
+animateOnScroll(".blog-post");
 
 // Add loading animation (without affecting hero section)
 window.addEventListener("load", () => {
