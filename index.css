@@ -114,7 +114,7 @@ body {
 .nav-toggle span {
   width: 30px;
   height: 3px;
-  background: var(--white);
+  background: black;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -1120,6 +1120,14 @@ section {
 }
 
 @media (max-width: 480px) {
+  .blog-post {
+    height: 500px;
+  }
+
+  .blog-post img {
+    height: 300px;
+  }
+  
   .awards {
     padding: 2rem 0;
   }
