@@ -29,7 +29,7 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#blog" class="nav-link">Blog</a></li>
           <li><a href="#awards" class="nav-link">Awards</a></li>
-          <li><a href="#collaborations" class="nav-link">Collaborations</a></li>
+          <li><a href="#collaboration" class="nav-link">Collaborations</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -85,7 +85,7 @@
           <!-- About Blog Posts -->
           <article class="blog-post" data-category="about">
             <div class="blog-post-image">
-              <img src="./about.jpg" alt="" />
+              <img src="./about.png" alt="" />
             </div>
             <div class="blog-post-content">
               <h3>Who is Prem Ananda? The Musical Scientist</h3>
@@ -145,7 +145,7 @@
           <!-- Early Life Blog Posts -->
           <article class="blog-post" data-category="journey">
             <div class="blog-post-image">
-              <img src="./jou.png" alt="" />
+              <img src="./jou.jpg" alt="" />
             </div>
             <div class="blog-post-content">
               <h3>The Path to Stardom: Struggles and Breakthroughs</h3>
@@ -186,12 +186,12 @@
           <article class="blog-post" data-category="music">
             <div class="blog-post-image">
               <img
-                src="music.jpg"
+                src="music.png"
                 alt=""
                 style="
                   width: 100%;
                   position: relative;
-                  top: 8rem;
+                  top: 2rem;
                   object-fit: fill;
                 "
               />
@@ -1042,9 +1042,21 @@
         </p>
 
         <div class="awards-showcase">
-          <img src="award1.png" alt="Award 1" class="award-showcase-img award-i" />
-          <img src="award2.png" alt="Award 2" class="award-showcase-img award-ii" />
-          <img src="award3.png" alt="Award 3" class="award-showcase-img award-iii" />
+          <img
+            src="award1.png"
+            alt="Award 1"
+            class="award-showcase-img award-i"
+          />
+          <img
+            src="award2.png"
+            alt="Award 2"
+            class="award-showcase-img award-ii"
+          />
+          <img
+            src="award3.png"
+            alt="Award 3"
+            class="award-showcase-img award-iii"
+          />
         </div>
 
         <div class="awards-grid">
@@ -1098,11 +1110,7 @@
 
         <div class="legacy-content-flex">
           <div class="legacy-image">
-            <img
-              src="foot.png"
-              alt="Prem Ananda"
-              class="legacy-img-large"
-            />
+            <img src="foot.png" alt="Prem Ananda" class="legacy-img-large" />
           </div>
           <div class="legacy-text">
             <p>
@@ -1148,6 +1156,58 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <form id="contact" action="" method="post">
+          <h3>Quick Contact</h3>
+          <h4>Contact us today, and get reply with in 24 hours!</h4>
+          <fieldset>
+            <input
+              placeholder="Your name"
+              type="text"
+              tabindex="1"
+              required
+              autofocus
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Your Email Address"
+              type="email"
+              tabindex="2"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Your Phone Number"
+              type="tel"
+              tabindex="3"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <textarea
+              placeholder="Type your Message Here...."
+              tabindex="5"
+              required
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...Sending"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -1156,7 +1216,6 @@
             &copy; 2024 Prem Ananda | The Musical Scientist. All rights
             reserved.
           </p>
-          <p>prem.anand.music@gmail.com | +91-9078395171</p>
         </div>
       </div>
     </footer>
