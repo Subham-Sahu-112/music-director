@@ -83,7 +83,7 @@ blogCategoryBtns.forEach((btn) => {
       const postCategory = post.getAttribute("data-category");
       
       if (category === "all" || postCategory === category) {
-        post.style.display = "block";
+        post.style.display = "flex";
         post.style.animation = "fadeInUp 0.5s ease-out";
       } else {
         post.style.display = "none";
